@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState, useEffect } from "react";
 import { type Todo, type Filter } from "./types";
 import { useLocalStorage } from "./useLocalStorage";
 import TodoHeader from "./TodoHeader";
@@ -9,14 +9,17 @@ import TodoFilter from "./TodoFilter";
 import TodoItem from "./TodoItem";
 
 const STORAGE_KEY = "todo-list-with-ai";
-const noop = () => () => {};
 
 /** 투두리스트 전체를 구성하는 컨테이너 컴포넌트 */
 export default function TodoList() {
   const [todos, setTodos] = useLocalStorage<Todo[]>(STORAGE_KEY, []);
-  const isMounted = useSyncExternalStore(noop, () => true, () => false);
+  const [isMounted, setIsMounted] = useState(false);
   const [input, setInput] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
+
+  useEffect(() => {
+    setIsMounted(true); // eslint-disable-line react-hooks/set-state-in-effect
+  }, []);
 
   /** 새 투두 추가 */
   function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
