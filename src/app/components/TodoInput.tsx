@@ -1,9 +1,7 @@
-import { type FormEvent } from "react";
-
 type TodoInputProps = {
   value: string;
   onChange: (value: string) => void;
-  onSubmit: (e: FormEvent) => void;
+  onSubmit: (e: React.SubmitEvent<HTMLFormElement>) => void;
 };
 
 /** 할 일 입력 폼 */

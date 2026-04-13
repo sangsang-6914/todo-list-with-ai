@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore, type FormEvent } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { type Todo, type Filter } from "./types";
 import { useLocalStorage } from "./useLocalStorage";
 import TodoHeader from "./TodoHeader";
@@ -19,7 +19,7 @@ export default function TodoList() {
   const [filter, setFilter] = useState<Filter>("all");
 
   /** 새 투두 추가 */
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     const trimmed = input.trim();
     if (!trimmed) return;
