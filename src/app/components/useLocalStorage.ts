@@ -4,7 +4,10 @@ import { useCallback, useRef, useSyncExternalStore } from "react";
 
 /** localStorage를 외부 스토어로 다루는 훅 (SSR-safe) */
 export function useLocalStorage<T>(key: string, initialValue: T) {
+  // localStorage raw data (문자열 저장)
   const cachedRaw = useRef<string | null>(null);
+  // localStorage raw data (파싱된 값 저장)
+  // value만 사용시 불필요한 직렬화 발생
   const cachedValue = useRef<T>(initialValue);
 
   const subscribe = useCallback(
