@@ -22,8 +22,8 @@ export default function TodoInput({ value, onChange, onSubmit }: TodoInputProps)
           autoFocus
           className={`flex-1 min-w-0 rounded-xl border bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition-colors ${
             isTooLong
-              ? "border-red-400 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-              : "border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
+              ? "border-red-400 focus:border-red-500"
+              : "border-gray-200 focus:border-gray-900"
           }`}
         />
         <button
