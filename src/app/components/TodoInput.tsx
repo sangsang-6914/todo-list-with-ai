@@ -19,6 +19,7 @@ export default function TodoInput({ value, onChange, onSubmit }: TodoInputProps)
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="할 일을 입력하세요"
+          autoFocus
           className={`flex-1 min-w-0 rounded-xl border bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition-colors ${
             isTooLong
               ? "border-red-400 focus:border-red-500 focus:ring-1 focus:ring-red-500"

@@ -11,7 +11,7 @@ export default function TodoHeader({
   return (
     <div>
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 tracking-tight">
-        Encar
+        Todo List
       </h1>
       <p className="mt-2 text-center text-sm text-gray-400">
         {completedCount}/{totalCount} 완료
