@@ -62,12 +62,12 @@ export default function TodoList() {
 
       {!isMounted ? (
         <div className="flex items-center justify-center py-16">
-          <div className="h-6 w-6 animate-spin rounded-full border-[3px] border-gray-200 border-t-gray-900" />
+          <div className="h-6 w-6 animate-spin rounded-full border-[3px] border-app-spinner-track border-t-app-spinner-active" />
         </div>
       ) : (
         <ul className="mt-4 space-y-2">
           {filteredTodos.length === 0 && (
-            <li className="py-12 text-center text-sm text-gray-400">
+            <li className="py-12 text-center text-sm text-app-subtle">
               할 일이 없습니다
             </li>
           )}

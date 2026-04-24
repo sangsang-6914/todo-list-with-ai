@@ -1,6 +1,108 @@
 @import "tailwindcss";
 
+:root {
+  --c-app-bg: #f9fafb;
+  --c-surface: #ffffff;
+  --c-text: #111827;
+  --c-text-muted: #9ca3af;
+  --c-text-subtle: #9ca3af;
+  --c-border: #e5e7eb;
+  --c-border-card: #f3f4f6;
+  --c-border-card-hover: #e5e7eb;
+  --c-input-border-focus: #111827;
+  --c-input-border-error: #f87171;
+  --c-input-border-error-focus: #ef4444;
+  --c-filter-track: #f3f4f6;
+  --c-filter-thumb: #ffffff;
+  --c-filter-active: #111827;
+  --c-filter-inactive: #6b7280;
+  --c-filter-inactive-hover: #374151;
+  --c-btn: #111827;
+  --c-btn-hover: #374151;
+  --c-btn-active: #1f2937;
+  --c-btn-text: #ffffff;
+  --c-btn-disabled: #d1d5db;
+  --c-btn-disabled-text: #ffffff;
+  --c-checkbox-on: #111827;
+  --c-checkbox-off: #d1d5db;
+  --c-checkbox-off-hover: #9ca3af;
+  --c-delete-hover-bg: #fef2f2;
+  --c-delete-hover-text: #ef4444;
+  --c-error-text: #ef4444;
+  --c-spinner-track: #e5e7eb;
+  --c-spinner-active: #111827;
+  --c-toggle: #6b7280;
+  --c-toggle-hover: #111827;
+}
+
+.dark {
+  --c-app-bg: #0c1222;
+  --c-surface: #161e2e;
+  --c-text: #f3f4f6;
+  --c-text-muted: #9ca3af;
+  --c-text-subtle: #6b7280;
+  --c-border: #2d3a52;
+  --c-border-card: #2d3a52;
+  --c-border-card-hover: #3d4f6f;
+  --c-input-border-focus: #93c5fd;
+  --c-input-border-error: #f87171;
+  --c-input-border-error-focus: #fca5a5;
+  --c-filter-track: #1e293b;
+  --c-filter-thumb: #334155;
+  --c-filter-active: #f3f4f6;
+  --c-filter-inactive: #94a3b8;
+  --c-filter-inactive-hover: #cbd5e1;
+  --c-btn: #e5e7eb;
+  --c-btn-hover: #f3f4f6;
+  --c-btn-active: #d1d5db;
+  --c-btn-text: #111827;
+  --c-btn-disabled: #374151;
+  --c-btn-disabled-text: #6b7280;
+  --c-checkbox-on: #e5e7eb;
+  --c-checkbox-off: #4b5563;
+  --c-checkbox-off-hover: #6b7280;
+  --c-delete-hover-bg: rgba(239, 68, 68, 0.15);
+  --c-delete-hover-text: #fca5a5;
+  --c-error-text: #fca5a5;
+  --c-spinner-track: #374151;
+  --c-spinner-active: #e5e7eb;
+  --c-toggle: #94a3b8;
+  --c-toggle-hover: #f3f4f6;
+}
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-app-bg: var(--c-app-bg);
+  --color-app-surface: var(--c-surface);
+  --color-app-text: var(--c-text);
+  --color-app-muted: var(--c-text-muted);
+  --color-app-subtle: var(--c-text-subtle);
+  --color-app-border: var(--c-border);
+  --color-app-border-card: var(--c-border-card);
+  --color-app-border-card-hover: var(--c-border-card-hover);
+  --color-app-input-focus: var(--c-input-border-focus);
+  --color-app-input-error: var(--c-input-border-error);
+  --color-app-input-error-focus: var(--c-input-border-error-focus);
+  --color-app-filter-track: var(--c-filter-track);
+  --color-app-filter-thumb: var(--c-filter-thumb);
+  --color-app-filter-active: var(--c-filter-active);
+  --color-app-filter-inactive: var(--c-filter-inactive);
+  --color-app-filter-inactive-hover: var(--c-filter-inactive-hover);
+  --color-app-btn: var(--c-btn);
+  --color-app-btn-hover: var(--c-btn-hover);
+  --color-app-btn-active: var(--c-btn-active);
+  --color-app-btn-text: var(--c-btn-text);
+  --color-app-btn-disabled: var(--c-btn-disabled);
+  --color-app-btn-disabled-text: var(--c-btn-disabled-text);
+  --color-app-checkbox-on: var(--c-checkbox-on);
+  --color-app-checkbox-off: var(--c-checkbox-off);
+  --color-app-checkbox-off-hover: var(--c-checkbox-off-hover);
+  --color-app-delete-hover-bg: var(--c-delete-hover-bg);
+  --color-app-delete-hover-text: var(--c-delete-hover-text);
+  --color-app-error: var(--c-error-text);
+  --color-app-spinner-track: var(--c-spinner-track);
+  --color-app-spinner-active: var(--c-spinner-active);
+  --color-app-toggle: var(--c-toggle);
+  --color-app-toggle-hover: var(--c-toggle-hover);
 }

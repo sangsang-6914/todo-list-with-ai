@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle";
+
 type TodoHeaderProps = {
   totalCount: number;
   completedCount: number;
@@ -9,11 +11,14 @@ export default function TodoHeader({
   completedCount,
 }: TodoHeaderProps) {
   return (
-    <div>
-      <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 tracking-tight">
+    <div className="relative">
+      <div className="absolute right-0 top-0 -mr-1 -mt-1">
+        <ThemeToggle />
+      </div>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center text-app-text tracking-tight">
         Todo List
       </h1>
-      <p className="mt-2 text-center text-sm text-gray-400">
+      <p className="mt-2 text-center text-sm text-app-muted">
         {completedCount}/{totalCount} 완료
       </p>
     </div>

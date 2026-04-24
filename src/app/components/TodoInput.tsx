@@ -20,22 +20,22 @@ export default function TodoInput({ value, onChange, onSubmit }: TodoInputProps)
           onChange={(e) => onChange(e.target.value)}
           placeholder="할 일을 입력하세요"
           autoFocus
-          className={`flex-1 min-w-0 rounded-xl border bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition-colors ${
+          className={`flex-1 min-w-0 rounded-xl border bg-app-surface px-4 py-3 text-sm text-app-text placeholder:text-app-muted outline-none transition-colors ${
             isTooLong
-              ? "border-red-400 focus:border-red-500"
-              : "border-gray-200 focus:border-gray-900"
+              ? "border-app-input-error focus:border-app-input-error-focus"
+              : "border-app-border focus:border-app-input-focus"
           }`}
         />
         <button
           type="submit"
           disabled={isEmpty || isTooLong}
-          className="shrink-0 rounded-xl bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700 active:bg-gray-800 disabled:bg-gray-300 disabled:cursor-not-allowed"
+          className="shrink-0 rounded-xl bg-app-btn px-5 py-3 text-sm font-medium text-app-btn-text transition-colors hover:bg-app-btn-hover active:bg-app-btn-active disabled:bg-app-btn-disabled disabled:text-app-btn-disabled-text disabled:cursor-not-allowed"
         >
           추가
         </button>
       </form>
       {isTooLong && (
-        <p className="mt-1.5 text-xs text-red-500">20자 이내로 입력해주세요</p>
+        <p className="mt-1.5 text-xs text-app-error">20자 이내로 입력해주세요</p>
       )}
     </div>
   );
